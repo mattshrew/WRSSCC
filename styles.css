@@ -1,0 +1,76 @@
+:root {
+    --bg: #222;
+    --dark: #111;
+    --mid: #888;
+    --light: #aaa;
+}
+
+* {
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    background-color: var(--bg);
+}
+
+#input-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 10%;
+}
+
+#input-container #input-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--dark);
+    border: 2px solid var(--mid);
+    padding: 28px 20px;
+    text-align: center;
+    cursor: pointer;
+    height: 8rem;
+    width: 16rem;
+}
+
+#input-container #input-box .download {
+    width: 33%;
+}
+
+#input-container #input-box p {
+    color: var(--light);
+    padding: 3px 0 0;
+    font-size: 20px;
+    white-space: nowrap;
+}
+
+#input-container #input-box input {
+    display: none;
+}
+
+#pairings-container {
+    padding: 4rem 10%;
+    background-color: var(--bg);
+}
+
+#pairings-container #pairings {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+#pairings-container #pairings table {
+    width: 30%;
+    border: 1px solid;
+    border-collapse: collapse;
+}
+
+#pairings-container #pairings table td, #pairings-container #pairings table td th {
+    text-align: center;
+    vertical-align: middle;
+    padding: 0.25rem 0.5rem;
+}
