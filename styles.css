@@ -136,8 +136,10 @@ nav #header h1#header-title {
     gap: 1.5rem;
 }
 
-#event-1 #event-info img#map {
+#event-1 #event-info #map {
     width: 30rem;
+    height: 24rem;
+    border-radius: 2rem;
 }
 
 #event-1 #event-info #map-caption {
@@ -203,22 +205,95 @@ nav #header h1#header-title {
 #event-2 #carousel .arrow {
     margin: 0 4rem;
 }
+#event-2 #carousel .arrow:hover {
+    cursor: pointer;
+    filter: invert(49%) sepia(99%) saturate(401%) hue-rotate(4deg) brightness(99%) contrast(89%);
+    transform: scale(1.1);
+    transition: 0.3s ease;
+}
 
 #event-2 #carousel #carousel-images {
+    position: relative;
     display: flex;
     align-items: center;
+    height: 21rem;
 }
 
 #event-2 #carousel #carousel-images img {
-    position: static;
+    position: absolute;
     width: 28rem;
+    height: 21rem;
     border-radius: 2rem;
+    opacity: 1;
+    transition: 
+        transform 0.5s ease,
+        top 0.5s ease,
+        left 0.5s ease;
+}
+#event-2 #carousel #carousel-images img.hidden {
+    opacity: 0;
+    transition: 0.5s ease;
 }
 
 #event-2 #carousel #carousel-images img.img-center {
-
+    top: 0;
+    left: -14rem;
+    z-index: 3;
+}
+#event-2 #carousel #carousel-images img.img-mid-left {
+    top: 0;
+    left: -19rem;
+    transform: scale(0.85);
+    z-index: 2;
+    opacity: 0.9;
+}
+#event-2 #carousel #carousel-images img.img-mid-right {
+    top: 0;
+    left: -9rem;
+    transform: scale(0.85);
+    z-index: 2;
+    opacity: 0.9;
+}
+#event-2 #carousel #carousel-images img.img-left {
+    top: 0;
+    left: -24rem;
+    transform: scale(0.65);
+    z-index: 1;
+    opacity: 0.8;
+}
+#event-2 #carousel #carousel-images img.img-right {
+    top: 0;
+    left: -4rem;
+    transform: scale(0.65);
+    z-index: 1;
+    opacity: 0.8;
 }
 
+
+/* footer */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1rem 15% 2rem;
+}
+
+footer p, footer a {
+    font-weight: 500;
+    font-size: 1rem;
+    color: white;
+}
+
+footer p a {
+    color: var(--yellow);
+}
+footer a:hover {
+    color: var(--gold);
+    transition: 0.5s ease;
+}
+
+/* pairings */
 
 #input-container {
     display: flex;

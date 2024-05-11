@@ -1,4 +1,38 @@
 document.addEventListener('DOMContentLoaded', function () {
+    const leftArrow = document.getElementById('arrow-left');
+    const rightArrow = document.getElementById('arrow-right');
+    const images = document.querySelectorAll('#carousel-images > img');
+    var mid = Math.floor((images.length + 1) / 2) - 1
+
+    leftArrow.addEventListener('click', function() {
+        mid = (mid - 1 + images.length) % images.length;
+        updateImages();
+    });
+
+    rightArrow.addEventListener('click', function() {
+        mid = (mid + 1) % images.length;
+        updateImages();
+    });
+
+    function updateImages() {
+        images.forEach((img) => {
+            img.classList = "hidden";
+        })
+
+        images[mid].classList = "img-center";
+        images[(mid+1) % images.length].classList = "img-mid-right";
+        images[(mid-1 + images.length) % images.length].classList = "img-mid-left";
+        images[(mid+2) % images.length].classList = "img-right";
+        images[(mid-2 + images.length) % images.length].classList = "img-left";
+        images[(mid+3) % images.length].classList = "hidden img-right";
+        images[(mid-3 + images.length) % images.length].classList = "hidden img-left";
+    }
+
+
+
+
+
+
     const inputBox = document.getElementById('input-box');
     const fileInput = document.getElementById('input-file');
   
