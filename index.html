@@ -6,17 +6,100 @@
     <meta name="keywords" content="WRSSCC, Chess, Waterloo">
     <title>WRSSCC - Waterloo Region Secondary School Chess Championship</title>
     <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
-    <div id="input-container">
+    <nav>
+        <a href="#" id="header">
+            <img src="img/logo.svg" id="header-logo" class="logo"/>
+            <h1 id="header-title">WRSSCC</h1>
+        </a>
+        <!-- <div id="nav-links">
+            <div class="navlink">
+                <a href="">Event</a>
+            </div>
+            <div class="navlink">
+                <a href="">Sponsor Us</a>
+            </div>
+            <div class="navlink">
+                <a href="">FAQ</a>
+            </div>
+        </div> -->
+    </nav>
+
+    <div id="hero">
+        <div id="hero-text">
+            <div id="hero-title">
+                <h1 id="hero-title-1">Waterloo Region</h1>
+                <h1 id="hero-title-2">Secondary School</h1>
+                <h1 id="hero-title-3">Chess Championship</h1>
+            </div>
+            <div id="hero-desc">
+                <h2>June, 2024 @ Waterloo C. I.</h2>
+            </div>
+        </div>
+        <div id="hero-graphic">
+            <img src="img/pieces.svg" id="hero-img"/>
+        </div>
+    </div>
+
+    <div id="event">
+        <div id="event-1">
+            <div id="event-info">
+                <img src="img/map.svg" id="map"/>
+                <h3 id="map-caption">June, 2024 @ Waterloo Collegiate Institute</h3>
+            </div>
+            <div id="event-about">
+                <div id="about-title">
+                    <h2>About the</h2>
+                    <h1>WRSSCC</h1>
+                </div>
+                <div id="about-text">
+                    <p>This June, <span>100+ students</span> from <span>8+ schools</span> will gather at WCI for the <span>largest high school chess tournament in the Waterloo Region.</span></p>
+                    <br/>
+                    <p>At the <span class="title">WRSSCC</span>, participants will...</p>
+                    <ul>
+                        <li>Meet <span>new people</span></li>
+                        <li>Enjoy <span>free food</span></li>
+                        <li>Win <span>huge prizes</span></li>
+                        <li>Play <span>some chess</span></li>
+                        <li>Have <span>tons of fun!</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="event-2">
+            <h1>Good <span class="title">Food.</span> Huge <span class="title">Prizes.</span> Amazing <span class="title">Chess.</span></h1>
+            <div id="carousel">
+                <img src="img/arrow-left.svg" class="arrow"/>
+                <div id="carousel-images">
+                    <img src="img/IMG_3061.jpg" class="img-left"/>
+                    <img src="img/IMG_3055.jpg" class="img-mid-left"/>
+                    <img src="img/IMG_3059.jpg" class="img-center"/>
+                    <img src="img/IMG_3055.jpg" class="img-mid-right"/>
+                    <img src="img/IMG_3459.jpg" class="img-right"/>
+                </div>
+                <img src="img/arrow-right.svg" class="arrow"/>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div id="input-container" class="hidden">
         <div id="input-box">
             <img class="download" src = "./img/download.svg">
             <p>Upload a csv file.</p>
             <input type="file" name="input-file" id="input-file" accept=".csv">
         </div>
     </div>
+    
     <div id="pairings-container" class="hidden">
         <div id="pairings">
             <table id="col-1">
