@@ -516,6 +516,15 @@ nav #header h1#header-title {
     opacity: 0.8;
 }
 
+@media (max-width: 600px) {
+    #event-2 {
+        display: none;
+    }
+    #event-2 #carousel #carousel-images img {
+        width: 16rem !important;
+        height: 12rem !important;
+    }
+}
 
 /* footer */
 footer {
@@ -539,6 +548,24 @@ footer a:hover {
     color: var(--gold);
     transition: 0.5s ease;
 }
+
+@media (max-width: 865px) {
+    footer {
+        padding: 1rem 10% 2rem;
+    }
+
+    footer p, footer a {
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 600px) {
+    footer {
+        flex-direction: column !important;
+        gap: 0.5rem !important;
+    }
+}
+
 
 /* pairings */
 
