@@ -17,6 +17,11 @@
     margin: 0;
 }
 
+html {
+    min-width: fit-content;
+    min-height: fit-content;
+}
+
 body {
     background-color: var(--bg);
 }
@@ -42,6 +47,7 @@ nav {
     width: 100%;
     height: 4rem;
     display: flex;
+    justify-content: flex-start;
     align-items: center;
     padding: 0 15%;
     background: var(--bg);
@@ -67,6 +73,17 @@ nav #header h1#header-title {
     color: var(--yellow);
 }
 
+@media (max-width: 1195px) {
+    nav #header h1#header-title {
+        font-size: 1.75rem;
+    }
+}
+
+@media (max-width: 865px) {
+    nav {
+        justify-content: center;
+    }
+}
 
 /* hero */
 
@@ -79,42 +96,208 @@ nav #header h1#header-title {
     align-items: center;
 }
 
-#hero #hero-title {
+#hero #hero-text {
+    width: 55%;
+}
+
+#hero #hero-text #hero-title {
     margin-bottom: 2.5rem;
 }
 
-#hero #hero-title h1 {
+#hero #hero-text #hero-title h1 {
     font-size: 3.25rem;
 }
 
-#hero #hero-title h1#hero-title-1 {
+#hero #hero-text #hero-title h1#hero-title-1 {
     color: white;
 }
-#hero #hero-title h1#hero-title-2 {
+#hero #hero-text #hero-title h1#hero-title-2 {
     color: var(--yellow);
 }
-#hero #hero-title h1#hero-title-3 {
+#hero #hero-text #hero-title h1#hero-title-3 {
     color: var(--gold);
 }
 
-#hero #hero-desc {
+#hero #hero-text #hero-desc {
     
 }
 
-#hero #hero-desc h2 {
+#hero #hero-text #hero-desc h3 {
     color: var(--gray);
     font-size: 2.25rem;
 }
 
-#hero #hero-graphic {
-
+#hero .hero-graphic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
 }
 
-#hero #hero-graphic img#hero-img {
-    width: 24rem;
-    height: 30rem;
+#hero .hero-graphic img.hero-img {
+    /* width: 24rem;
+    height: 30rem; */
+    width: 90%;
 }
 
+#hero #hero-graphic-left {
+    display: none;
+}
+
+@media (max-width: 1410px) {
+    h1 {
+        font-size: 3rem !important;
+    }
+    h2 {
+        font-size: 2.5rem !important;
+    }
+    h3 {
+        font-size: 2rem !important;
+    }
+}
+
+@media (max-width: 1300px) {
+    h1 {
+        font-size: 2.75rem !important;
+    }
+    h2 {
+        font-size: 2.25rem !important;
+    }
+    h3 {
+        font-size: 1.75rem !important;
+    }
+}
+
+@media (max-width: 1195px) {
+    h1 {
+        font-size: 2.5rem !important;
+    }
+    h2 {
+        font-size: 2rem !important;
+    }
+    h3 {
+        font-size: 1.5rem !important;
+    }
+}
+
+@media (max-width: 1084px) {
+    h1 {
+        font-size: 2.25rem !important;
+    }
+    h2 {
+        font-size: 1.75rem !important;
+    }
+    h3 {
+        font-size: 1.25rem !important;
+    }
+}
+
+@media (max-width: 975px) {
+    h1 {
+        font-size: 2rem !important;
+    }
+    h2 {
+        font-size: 2rem !important;
+    }
+    h3 {
+        font-size: 1rem !important;
+    }
+}
+
+@media (max-width: 865px) {
+    #hero {
+        padding: calc(4rem + 5rem) 10% 5rem;
+        height: fit-content;
+    }
+    #hero .hero-graphic {
+        width: 25%;
+    }
+    #hero #hero-graphic-left {
+        display: block;
+    }
+
+    #hero #hero-text #hero-title {
+        margin-bottom: 1.75rem;
+    }
+    h1 {
+        text-align: center !important;
+        font-size: 2rem !important;
+    }
+    h2 {
+        font-size: 1.5rem !important;
+    }
+    h3 {
+        text-align: center !important;
+        font-size: 1rem !important;
+    }
+}
+
+@media (max-width: 800px) {
+    h1 {
+        text-align: center !important;
+        font-size: 1.75rem !important;
+    }
+    h2 {
+        font-size: 1.25rem !important;
+    }
+    h3 {
+        text-align: center !important;
+        font-size: 1rem !important;
+    }
+}
+
+@media (max-width: 700px) {
+    #hero #hero-text #hero-title {
+        margin-bottom: 1.5rem;
+    }
+    h1 {
+        text-align: center !important;
+        font-size: 1.5rem !important;
+    }
+    h2 {
+        font-size: 1.25rem !important;
+    }
+    h3 {
+        text-align: center !important;
+        font-size: 1rem !important;
+    }
+}
+
+@media (max-width: 600px) {
+    h1 {
+        text-align: center !important;
+        font-size: 1.25rem !important;
+    }
+    h2 {
+        font-size: 1rem !important;
+    }
+    h3 {
+        text-align: center !important;
+        font-size: 0.75rem !important;
+    }
+}
+
+@media (max-width: 500px) {
+    #hero .hero-graphic {
+        display: none !important;
+    }
+
+    #hero #hero-text {
+        width: 100%;
+    }
+
+    h1 {
+        text-align: center !important;
+        font-size: 2rem !important;
+    }
+    h2 {
+        font-size: 1.5rem !important;
+    }
+    h3 {
+        text-align: center !important;
+        font-size: 1.25rem !important;
+    }
+}
 
 
 /* event */
@@ -135,12 +318,12 @@ nav #header h1#header-title {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 50%;
     gap: 1.5rem;
 }
 
 #event-1 #event-info #map {
-    width: 30rem;
-    height: 24rem;
+    width: 100%;
     border-radius: 2rem;
 }
 
@@ -150,7 +333,7 @@ nav #header h1#header-title {
 }
 
 #event-1 #event-about {
-    
+    width: 50%;
 }
 
 #event-1 #event-about #about-title {
@@ -177,6 +360,68 @@ nav #header h1#header-title {
 }
 #event-1 #event-about #about-text span.title {
     color: var(--gold);
+}
+
+@media (max-width: 1410px) {
+    #event-1 #event-info #map-caption {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 1195px) {
+    #event-1 #event-info #map-caption {
+        font-size: 0.75rem;
+    }
+    
+    #event-1 #event-about #about-text p, #event-1 #event-about #about-text li {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 865px) {
+    #event-1 {
+        flex-direction: column-reverse;
+        padding: 5rem 10%;
+        gap: 5rem;
+    }
+
+    #event-1 #event-info {
+        width: 100%;
+    }
+    #event-1 #event-about {
+        width: 75%;
+    }
+
+    #event-1 #event-about #about-title h1, h2 {
+        text-align: center;
+    }
+
+    #event-1 #event-info #map-caption {
+        font-size: 1.25rem;
+        text-align: center;
+    }
+
+    #event-1 #event-about #about-text p, #event-1 #event-about #about-text li {
+        font-size: 1.25rem;
+    }
+    
+}
+
+@media (max-width: 600px) {
+    #event-1 {
+        gap: 2.5rem;
+    }
+    
+    #event-1 #event-about {
+        width: 100%;
+    }
+
+    #event-1 #event-info #map-caption {
+        font-size: 1rem;
+    }
+    #event-1 #event-about #about-text p, #event-1 #event-about #about-text li {
+        font-size: 1rem;
+    }
 }
 
 
@@ -287,7 +532,7 @@ footer p, footer a {
     color: white;
 }
 
-footer p a {
+footer a {
     color: var(--yellow);
 }
 footer a:hover {
