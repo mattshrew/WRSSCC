@@ -30,7 +30,7 @@ body {
     display: none !important;
 }
 
-h1, h2, h3, h4, h5, h6, p, a, li, th, td {
+header, h1, h2, h3, h4, h5, h6, p, a, li, th, td {
     text-decoration: none;
     color: white;
     font-family: "Inter", sans-serif;
@@ -67,14 +67,14 @@ nav #header img.logo#header-logo {
     height: 3rem;
 }
 
-nav #header h1#header-title {
+nav #header #header-title {
     font-size: 2rem;
     font-weight: 650;
     color: var(--yellow);
 }
 
 @media (max-width: 1195px) {
-    nav #header h1#header-title {
+    nav #header #header-title {
         font-size: 1.75rem;
     }
 }
@@ -207,7 +207,6 @@ nav #header h1#header-title {
 @media (max-width: 865px) {
     #hero {
         padding: calc(4rem + 5rem) 10% 5rem;
-        height: fit-content;
     }
     #hero .hero-graphic {
         width: 25%;
@@ -310,7 +309,7 @@ nav #header h1#header-title {
     justify-content: space-between;
     align-items: center;
     padding: 7.5rem 15%;
-    gap: 7.5rem;
+    /* gap: 7.5rem; */
 }
 
 #event-1 #event-info {
@@ -318,12 +317,14 @@ nav #header h1#header-title {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 50%;
+    width: 45%;
+    height: 30vw;
     gap: 1.5rem;
 }
 
 #event-1 #event-info #map {
     width: 100%;
+    height: 100%;
     border-radius: 2rem;
 }
 
@@ -333,7 +334,7 @@ nav #header h1#header-title {
 }
 
 #event-1 #event-about {
-    width: 50%;
+    width: 45%;
 }
 
 #event-1 #event-about #about-title {
@@ -370,7 +371,7 @@ nav #header h1#header-title {
 
 @media (max-width: 1195px) {
     #event-1 #event-info #map-caption {
-        font-size: 0.75rem;
+        font-size: 0.875rem;
     }
     
     #event-1 #event-about #about-text p, #event-1 #event-about #about-text li {
@@ -387,6 +388,7 @@ nav #header h1#header-title {
 
     #event-1 #event-info {
         width: 100%;
+        height: 70vw;
     }
     #event-1 #event-about {
         width: 75%;
