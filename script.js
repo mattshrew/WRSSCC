@@ -91,6 +91,9 @@ function buildFAQs() {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
+    buildFAQs();
+
+
     const leftArrow = document.getElementById('arrow-left');
     const rightArrow = document.getElementById('arrow-right');
     const images = document.querySelectorAll('#carousel-images > img');
