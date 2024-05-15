@@ -70,6 +70,7 @@ function buildFAQs() {
 
         accordion.id = `faq-${i}`;
         accordion.classList.add("closed");
+        console.log(accordion, height);
 
         css.insert(`.faq-accordion.open#${accordion.id} .faq-question-answer {max-height: ${height}px !important}`);
 
@@ -77,7 +78,6 @@ function buildFAQs() {
 
         [symbol, questionTitle].forEach((e) => {
             e.addEventListener('click', function() {
-                console.log(accordion, height);
                 if (accordion.classList.contains('closed')) {
                     accordion.classList.remove('closed');
                     accordion.classList.add('open');
