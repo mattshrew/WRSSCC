@@ -5,7 +5,7 @@ var FAQs = [
     },
     {
         question: "Will there be food at the tournament?",
-        answer: "Yes! There will be free snacks provided throughout the tournament and pizza at the end, after the closing ceremony."
+        answer: "Yes! There will be many free snacks provided throughout the tournament and pizza at the end."
     },
     {
         question: "What if I'm not good at chess?",
@@ -66,7 +66,7 @@ function buildFAQs() {
         accordion.appendChild(question);
         FAQcols[(i % 2)].appendChild(accordion);
         
-        let height = questionAnswer.clientHeight;
+        let height = questionAnswer.offsetHeight;
 
         accordion.id = `faq-${i}`;
         accordion.classList.add("closed");
