@@ -144,7 +144,7 @@ nav #header #header-title {
     display: none;
 }
 
-@media (max-width: 1410px) {
+@media (max-width: 1510px) {
     h1 {
         font-size: 3rem !important;
     }
@@ -156,7 +156,7 @@ nav #header #header-title {
     }
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1400px) {
     h1 {
         font-size: 2.75rem !important;
     }
@@ -168,7 +168,7 @@ nav #header #header-title {
     }
 }
 
-@media (max-width: 1195px) {
+@media (max-width: 1295px) {
     h1 {
         font-size: 2.5rem !important;
     }
@@ -180,7 +180,7 @@ nav #header #header-title {
     }
 }
 
-@media (max-width: 1084px) {
+@media (max-width: 1184px) {
     h1 {
         font-size: 2.25rem !important;
     }
@@ -192,7 +192,7 @@ nav #header #header-title {
     }
 }
 
-@media (max-width: 975px) {
+@media (max-width: 1075px) {
     h1 {
         font-size: 2rem !important;
     }
@@ -204,7 +204,7 @@ nav #header #header-title {
     }
 }
 
-@media (max-width: 865px) {
+@media (max-width: 965px) {
     #hero {
         padding: calc(4rem + 5rem) 10% 5rem;
     }
@@ -231,7 +231,7 @@ nav #header #header-title {
     }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
     h1 {
         text-align: center !important;
         font-size: 1.75rem !important;
@@ -245,7 +245,7 @@ nav #header #header-title {
     }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
     #hero #hero-text #hero-title {
         margin-bottom: 1.5rem;
     }
@@ -262,7 +262,7 @@ nav #header #header-title {
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
     h1 {
         text-align: center !important;
         font-size: 1.25rem !important;
@@ -276,7 +276,7 @@ nav #header #header-title {
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
     #hero .hero-graphic {
         display: none !important;
     }
@@ -295,6 +295,18 @@ nav #header #header-title {
     h3 {
         text-align: center !important;
         font-size: 1.25rem !important;
+    }
+}
+
+@media (max-width: 415px) {
+    h1 {
+        font-size: 1.75rem !important;
+    }
+    h2 {
+        font-size: 1.25rem !important;
+    }
+    h3 {
+        font-size: 1rem !important;
     }
 }
 
@@ -379,7 +391,7 @@ nav #header #header-title {
     }
 }
 
-@media (max-width: 865px) {
+@media (max-width: 965px) {
     #event-1 {
         flex-direction: column-reverse;
         padding: 5rem 10%;
@@ -387,8 +399,8 @@ nav #header #header-title {
     }
 
     #event-1 #event-info {
-        width: 100%;
-        height: 70vw;
+        width: 75%;
+        height: 50vw;
     }
     #event-1 #event-about {
         width: 75%;
@@ -409,7 +421,7 @@ nav #header #header-title {
     
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
     #event-1 {
         gap: 2.5rem;
     }
@@ -452,7 +464,8 @@ nav #header #header-title {
 }
 
 #event-2 #carousel .arrow {
-    margin: 0 4rem;
+    margin: 0 5%;
+    width: 5%;
 }
 #event-2 #carousel .arrow:hover {
     cursor: pointer;
@@ -465,13 +478,14 @@ nav #header #header-title {
     position: relative;
     display: flex;
     align-items: center;
-    height: 21rem;
+    width: 100%;
+    aspect-ratio: 5 / 3;
 }
 
 #event-2 #carousel #carousel-images img {
     position: absolute;
-    width: 28rem;
-    height: 21rem;
+    width: 80%;
+    height: 100%;
     border-radius: 2rem;
     opacity: 1;
     transition: 
@@ -486,45 +500,46 @@ nav #header #header-title {
 
 #event-2 #carousel #carousel-images img.img-center {
     top: 0;
-    left: -14rem;
+    left: 10%;
+    /* left: -14rem; */
     z-index: 3;
 }
 #event-2 #carousel #carousel-images img.img-mid-left {
     top: 0;
-    left: -19rem;
+    left: -2.5%;
+    /* left: -19rem; */
     transform: scale(0.85);
     z-index: 2;
     opacity: 0.9;
 }
 #event-2 #carousel #carousel-images img.img-mid-right {
     top: 0;
-    left: -9rem;
+    left: 22.5%;
+    /* left: -9rem; */
     transform: scale(0.85);
     z-index: 2;
     opacity: 0.9;
 }
 #event-2 #carousel #carousel-images img.img-left {
     top: 0;
-    left: -24rem;
+    left: -15%;
+    /* left: -24rem; */
     transform: scale(0.65);
     z-index: 1;
     opacity: 0.8;
 }
 #event-2 #carousel #carousel-images img.img-right {
     top: 0;
-    left: -4rem;
+    left: 35%;
+    /* left: -4rem; */
     transform: scale(0.65);
     z-index: 1;
     opacity: 0.8;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 965px) {
     #event-2 {
-        display: none;
-    }
-    #event-2 #carousel #carousel-images img {
-        width: 16rem !important;
-        height: 12rem !important;
+        padding: 7.5rem 10%;
     }
 }
 
