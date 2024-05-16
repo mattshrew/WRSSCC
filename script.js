@@ -5,7 +5,7 @@ var FAQs = [
     },
     {
         question: "Will there be food at the tournament?",
-        answer: "Yes! There will be many free snacks provided throughout the tournament and pizza at the end."
+        answer: "Yes! There will be many free snacks provided throughout the tournament and pizza at the end, after the closing ceremony."
     },
     {
         question: "What if I'm not good at chess?",
@@ -33,6 +33,10 @@ var FAQs = [
     },
 ]
 
+function sleep(ms) {  
+    return new Promise(resolve => setTimeout(resolve, ms));  
+} 
+
 var css = new function() {
     function addStyle() {
        let head = document.head;
@@ -48,10 +52,10 @@ var css = new function() {
 }
  
 
-function buildFAQs() {
+async function buildFAQs() {
     const FAQcols = document.getElementsByClassName('faq-col');
     var i = 0
-    FAQs.forEach((faq) => {
+    FAQs.forEach(async (faq) => {
         const accordion = document.createElement("div"); accordion.classList = "faq-accordion";
         const symbol = document.createElement("img"); symbol.classList = "faq-symbol"; symbol.src = "img/faq.svg";
         const question = document.createElement("div"); question.classList = "faq-question";
@@ -59,22 +63,32 @@ function buildFAQs() {
             questionTitle.innerHTML = faq.question;
         const questionAnswer = document.createElement("p"); questionAnswer.classList = "faq-question-answer";
             questionAnswer.innerHTML = faq.answer;
-        
+
         question.appendChild(questionTitle);
         question.appendChild(questionAnswer);
         accordion.appendChild(symbol);
         accordion.appendChild(question);
-        FAQcols[(i % 2)].appendChild(accordion);
+        FAQcols[i % 2].appendChild(accordion);
         
-        let height = questionAnswer.offsetHeight;
+        i++;
+        
+        await sleep(100);
+
+        let height = questionAnswer.clientHeight;
+        console.log(questionAnswer, height);
 
         accordion.id = `faq-${i}`;
         accordion.classList.add("closed");
-        console.log(accordion, height);
 
         css.insert(`.faq-accordion.open#${accordion.id} .faq-question-answer {max-height: ${height}px !important}`);
 
-        i++;
+        accordion.addEventListener('mouseenter', function() {
+            accordion.classList.add('hover');
+        });
+        accordion.addEventListener('mouseleave', function() {
+            accordion.classList.remove('hover');
+        });
+        
 
         [symbol, questionTitle].forEach((e) => {
             e.addEventListener('click', function() {
@@ -86,13 +100,19 @@ function buildFAQs() {
                     accordion.classList.add('closed');
                 }
             });
+            e.addEventListener('mouseenter', function() {
+                accordion.classList.add('hover');
+            });
+            e.addEventListener('mouseleave', function() {
+                accordion.classList.remove('hover');
+            });
         });
     });
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-    buildFAQs();
-
+document.addEventListener('DOMContentLoaded', async function () {
+    await sleep(100);
+    await buildFAQs();
 
     const leftArrow = document.getElementById('arrow-left');
     const rightArrow = document.getElementById('arrow-right');

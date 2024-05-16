@@ -578,6 +578,7 @@ nav #header #header-title {
 }
 
 #faq #faq-container .faq-col .faq-accordion .faq-symbol {
+    width: 0.88rem;
     cursor: pointer;
     transition: transform 0.25s ease;
 }
@@ -594,9 +595,13 @@ nav #header #header-title {
 }
 
 #faq #faq-container .faq-col .faq-accordion .faq-question .faq-question-title {
-    font-size: 1.125rem;
+    font-size: 1.1rem;
     font-weight: 500;
     cursor: pointer;
+}
+
+#faq #faq-container .faq-col .faq-accordion.hover .faq-symbol, #faq #faq-container .faq-col .faq-accordion.hover .faq-question .faq-question-title {
+    filter: brightness(0) saturate(100%) invert(85%) sepia(21%) saturate(246%) hue-rotate(3deg) brightness(102%) contrast(98%);
 }
 
 #faq #faq-container .faq-col .faq-accordion .faq-question .faq-question-answer {
@@ -611,12 +616,27 @@ nav #header #header-title {
     transition: max-height 0.5s ease;
 }
 
-@media (max-width: 1295px) {
+@media (max-width: 1376px) {
+    #faq #faq-container .faq-col .faq-accordion .faq-symbol {
+        width: 0.8rem;
+    }
     #faq #faq-container .faq-col .faq-accordion .faq-question .faq-question-title {
         font-size: 1rem;
     }
     #faq #faq-container .faq-col .faq-accordion .faq-question .faq-question-answer {
-        font-size: 0.875rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 1264px) {
+    #faq #faq-container .faq-col .faq-accordion .faq-symbol {
+        width: 0.72rem;
+    }
+    #faq #faq-container .faq-col .faq-accordion .faq-question .faq-question-title {
+        font-size: 0.9rem;
+    }
+    #faq #faq-container .faq-col .faq-accordion .faq-question .faq-question-answer {
+        font-size: 0.8rem;
     }
 }
 
@@ -634,6 +654,9 @@ nav #header #header-title {
         margin-bottom: 3rem;
     }
 
+    #faq #faq-container .faq-col .faq-accordion .faq-symbol {
+        width: 1rem;
+    }
     #faq #faq-container .faq-col .faq-accordion .faq-question .faq-question-title {
         font-size: 1.25rem;
     }
@@ -643,6 +666,9 @@ nav #header #header-title {
 }
 
 @media (max-width: 700px) {
+    #faq #faq-container .faq-col .faq-accordion .faq-symbol {
+        width: 0.8rem;
+    }
     #faq #faq-container .faq-col .faq-accordion .faq-question .faq-question-title {
         font-size: 1rem;
     }
