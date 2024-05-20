@@ -1,6 +1,6 @@
 var FAQs = [
     {
-        question: "How much does it cost to attend the WRSSCC?",
+        question: "How much does the WRSSCC cost to attend?",
         answer: "The WRSSCC is completely free to attend!"
     },
     {
@@ -31,6 +31,14 @@ var FAQs = [
         question: "What can I do if I arrive early?",
         answer: "We'll have a BINGO challenge (with prizes for winners) for players who arrive before 3:20 PM. The BINGO board will be revealed on the day of the tournament."
     },
+    {
+        question: "Do I need to register for the event?",
+        answer: "Nope! All you need to do is to show up before 3:20 PM on June 10th at WCI."
+    },
+    {
+        question: "Where in WCI will the tournament be held?",
+        answer: "The tournament will be held in the <a href='https://docs.google.com/document/d/1HdUx42nVZA-e47hEEcPy-1xZQ_8En1bzxnCaeB9rCzo/edit#heading=h.7mpr1r4ff46s'>WCI cafeteria</a>."
+    },
 ]
 
 function sleep(ms) {  
@@ -60,20 +68,21 @@ async function buildFAQs() {
         const symbol = document.createElement("img"); symbol.classList = "faq-symbol"; symbol.src = "img/faq.svg";
         const question = document.createElement("div"); question.classList = "faq-question";
         const questionTitle = document.createElement("h5"); questionTitle.classList = "faq-question-title";
-            questionTitle.innerHTML = faq.question;
+        questionTitle.innerHTML = faq.question;
         const questionAnswer = document.createElement("p"); questionAnswer.classList = "faq-question-answer";
-            questionAnswer.innerHTML = faq.answer;
-
+        questionAnswer.innerHTML = faq.answer;
+        
         question.appendChild(questionTitle);
         question.appendChild(questionAnswer);
         accordion.appendChild(symbol);
         accordion.appendChild(question);
+        
+        await sleep(50);
+
         FAQcols[i % 2].appendChild(accordion);
         
         i++;
         
-        await sleep(100);
-
         let height = questionAnswer.clientHeight;
         console.log(questionAnswer, height);
 
