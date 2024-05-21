@@ -119,12 +119,61 @@ nav #header #header-title {
 }
 
 #hero #hero-text #hero-desc {
-    
+    display: block;
+    position: relative;
 }
 
 #hero #hero-text #hero-desc h3 {
     color: var(--gray);
     font-size: 2.25rem;
+}
+
+#hero #hero-text #hero-desc h3 span {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    overflow: hidden;
+    animation: shift-words 15s linear infinite 0s;
+}
+
+#hero #hero-text #hero-desc h3 span:nth-child(2) {
+    animation-delay: 3s;
+}
+#hero #hero-text #hero-desc h3 span:nth-child(3) {
+    animation-delay: 6s;
+}
+#hero #hero-text #hero-desc h3 span:nth-child(4) {
+    animation-delay: 9s;
+}
+#hero #hero-text #hero-desc h3 span:nth-child(5) {
+    animation-delay: 12s;
+}
+
+@keyframes shift-words {
+    0% { 
+        opacity: 0; 
+    }
+    5% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    10% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    20% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    25% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 0;
+    }
 }
 
 #hero .hero-graphic {
@@ -338,9 +387,18 @@ nav #header #header-title {
     border-radius: 2rem;
 }
 
-#event-1 #event-info #map-caption {
+#event-1 #event-info #map-caption p {
     color: var(--gray);
+    text-align: center;
     font-size: 1.25rem;
+}
+
+#event-1 #event-info #map-caption #map-caption-location {
+    text-decoration: underline;
+}
+#event-1 #event-info #map-caption #map-caption-location:hover {
+    color: var(--yellow);
+    transition: color 0.5s ease;
 }
 
 #event-1 #event-about {
@@ -609,6 +667,13 @@ nav #header #header-title {
     color: var(--gray);
     overflow: hidden;
     transition: max-height 0.5s ease;
+}
+#faq #faq-container .faq-col .faq-accordion .faq-question .faq-question-answer a {
+    color: var(--gray);
+    text-decoration: underline;
+}
+#faq #faq-container .faq-col .faq-accordion .faq-question .faq-question-answer a:hover {
+    color: var(--yellow);
 }
 
 #faq #faq-container .faq-col .faq-accordion.closed .faq-question .faq-question-answer {
