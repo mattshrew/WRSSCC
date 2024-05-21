@@ -37,7 +37,7 @@ var FAQs = [
     },
     {
         question: "Where in WCI will the tournament be held?",
-        answer: "The tournament will be held in the <a href='https://docs.google.com/document/d/1HdUx42nVZA-e47hEEcPy-1xZQ_8En1bzxnCaeB9rCzo/edit#heading=h.7mpr1r4ff46s'>WCI cafeteria</a>."
+        answer: "The tournament will be held in the <a href='https://docs.google.com/document/d/1HdUx42nVZA-e47hEEcPy-1xZQ_8En1bzxnCaeB9rCzo/edit#heading=h.7mpr1r4ff46s' target='_blank'>WCI cafeteria</a>."
     },
 ]
 

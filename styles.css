@@ -437,8 +437,14 @@ nav #header #header-title {
     }
 }
 
+@media (max-width: 1290px) {
+    #event-1 #event-info #map-caption p {
+        font-size: 1.125rem;
+    }
+}
+
 @media (max-width: 1195px) {
-    #event-1 #event-info #map-caption {
+    #event-1 #event-info #map-caption p {
         font-size: 0.875rem;
     }
     
@@ -466,7 +472,7 @@ nav #header #header-title {
         text-align: center;
     }
 
-    #event-1 #event-info #map-caption {
+    #event-1 #event-info #map-caption p {
         font-size: 1.25rem;
         text-align: center;
     }
@@ -486,7 +492,7 @@ nav #header #header-title {
         width: 100%;
     }
 
-    #event-1 #event-info #map-caption {
+    #event-1 #event-info #map-caption p {
         font-size: 1rem;
     }
     #event-1 #event-about #about-text p, #event-1 #event-about #about-text li {
@@ -693,7 +699,7 @@ nav #header #header-title {
     }
 }
 
-@media (max-width: 1264px) {
+@media (max-width: 1184px) {
     #faq #faq-container .faq-col .faq-accordion .faq-symbol {
         width: 0.72rem;
     }
