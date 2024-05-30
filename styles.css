@@ -386,20 +386,6 @@ nav #navlinks .button:hover {
 }
 
 @media (max-width: 700px) {
-    h1 {
-        text-align: center !important;
-        font-size: 1.25rem !important;
-    }
-    h2 {
-        font-size: 1rem !important;
-    }
-    h3 {
-        text-align: center !important;
-        font-size: 0.75rem !important;
-    }
-}
-
-@media (max-width: 600px) {
     #hero .hero-graphic {
         display: none !important;
     }
