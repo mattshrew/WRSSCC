@@ -322,12 +322,6 @@ nav #navlinks .button:hover {
         display: block;
     }
 
-    #hero #hero-text {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
     #hero #hero-text #hero-title {
         margin-bottom: 1.75rem;
     }
@@ -342,14 +336,6 @@ nav #navlinks .button:hover {
         text-align: center !important;
         font-size: 1rem !important;
     }
-
-    #hero #hero-text #hero-desc {
-        display: none;
-    }
-
-    #hero #hero-text #hero-button.button {
-        display: block;
-    }
 }
 
 @media (max-width: 900px) {
@@ -363,6 +349,22 @@ nav #navlinks .button:hover {
     h3 {
         text-align: center !important;
         font-size: 1rem !important;
+    }
+}
+
+@media (max-width: 865px) {
+    #hero #hero-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    #hero #hero-text #hero-desc {
+        display: none;
+    }
+
+    #hero #hero-text #hero-button.button {
+        display: block;
     }
 }
 
