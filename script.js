@@ -84,7 +84,7 @@ async function buildFAQs() {
         i++;
         
         let height = questionAnswer.clientHeight;
-        console.log(questionAnswer, height);
+        // console.log(questionAnswer, height);
 
         accordion.id = `faq-${i}`;
         accordion.classList.add("closed");
@@ -121,6 +121,16 @@ async function buildFAQs() {
 
 document.addEventListener('DOMContentLoaded', async function () {
     await sleep(100);
+
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+    console.log(vh);
+
+    window.addEventListener('resize', () => {
+        let vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+    }); 
+
     await buildFAQs();
 
     const leftArrow = document.getElementById('arrow-left');
