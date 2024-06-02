@@ -1,0 +1,119 @@
+:root {
+    --dark: #111;
+    --mid: #888;
+    --light: #aaa;
+
+    --bg: #141414;
+    --gray: #D9D9D9;
+    --yellow: #E4C88B;
+    --gold: #C89116;
+
+    --vh: 1vh;
+}
+
+/* GENERAL */
+
+* {
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html {
+    min-width: fit-content;
+    min-height: fit-content;
+}
+
+body {
+    background-color: var(--bg);
+}
+
+.hidden {
+    display: none !important;
+}
+
+header, h1, h2, h3, h4, h5, h6, p, a, li, th, td {
+    text-decoration: none;
+    color: white;
+    font-family: "Inter", sans-serif;
+}
+
+
+/* PAIRINGS */
+
+#input-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 11.5rem 5% 0;
+}
+
+#input-container #input-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--dark);
+    border: 2px solid var(--mid);
+    padding: 28px 20px;
+    text-align: center;
+    cursor: pointer;
+    height: 8rem;
+    width: 16rem;
+}
+
+#input-container #input-box .download {
+    width: 33%;
+}
+
+#input-container #input-box p {
+    color: var(--light);
+    padding: 3px 0 0;
+    font-size: 20px;
+    white-space: nowrap;
+}
+
+#input-container #input-box input {
+    display: none;
+}
+
+
+#pairings-container {
+    width: 100%;
+    height: calc(var(--vh, 1vh) * 100);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5%;
+    background-color: var(--bg);
+}
+
+#pairings-container #pairings {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#pairings-container #pairings table {
+    width: 30%;
+    border: 1px solid var(--light);
+    border-collapse: collapse;
+}
+
+#pairings-container #pairings table th {
+    text-align: center;
+    vertical-align: middle;
+    padding: 0.25rem 0.5rem;
+    font-weight: 400;
+    color: white;
+}
+
+#pairings-container #pairings table td {
+    text-align: center;
+    vertical-align: middle;
+    padding: 0.25rem 0.5rem;
+    color: var(--light);
+}
