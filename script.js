@@ -5,7 +5,7 @@ var FAQs = [
     },
     {
         question: "Will there be food at the tournament?",
-        answer: "Yes! There will be many free snacks provided throughout the tournament and pizza at the end, after the closing ceremony."
+        answer: "Yes! There will be many free snacks provided throughout the tournament."
     },
     {
         question: "What if I'm not good at chess?",
