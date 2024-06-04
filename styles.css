@@ -701,11 +701,8 @@ nav #navlinks .button:hover {
         display: inline !important;
     }
 
-    #gallery {
-        overflow: scroll;
-    }
     #gallery #carousel {
-        overflow: scroll;
+        overflow-x: scroll;
     }
 
     #gallery #carousel .arrow {
@@ -717,7 +714,6 @@ nav #navlinks .button:hover {
         justify-content: flex-start;
         align-items: center;
         gap: 1rem;
-        overflow: visible;
     }
     #gallery #carousel #carousel-images img {
         position: static;
@@ -728,8 +724,17 @@ nav #navlinks .button:hover {
         transition: none;
     }
 
-    @keyframes cycle {
-        0% {  }
+    ::-webkit-scrollbar {
+        -webkit-appearance: none;
+    }
+    
+    ::-webkit-scrollbar:horizontal {
+        height: 0.3rem;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        background-color: #4d4d4d;
+        border-radius: 10px;
     }
 }
 
