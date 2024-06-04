@@ -198,6 +198,7 @@ nav #navlinks .button:hover {
     display: none;
     width: fit-content;
     text-align: center;
+    margin: 3.5rem auto 0;
     padding: 0.5rem 2rem;
     font-size: 1rem;
     font-weight: 500;
@@ -353,25 +354,41 @@ nav #navlinks .button:hover {
 }
 
 @media (max-width: 865px) {
-    #hero #hero-text {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    #hero #hero-text #hero-desc {
-        display: none;
+    #hero #hero-text #hero-title {
+        margin-bottom: 1rem;
     }
 
     #hero #hero-text #hero-button.button {
         display: block;
     }
+
+    @keyframes shift-words {
+        0% { 
+            opacity: 0; 
+        }
+        5% {
+            opacity: 0;
+            transform: translateY(-1rem);
+        }
+        10% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        20% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        25% {
+            opacity: 0;
+            transform: translateY(1rem);
+        }
+        100% {
+            opacity: 0;
+        }
+    }
 }
 
 @media (max-width: 800px) {
-    #hero #hero-text #hero-title {
-        margin-bottom: 1.5rem;
-    }
     h1 {
         text-align: center !important;
         font-size: 1.5rem !important;
@@ -404,6 +421,10 @@ nav #navlinks .button:hover {
     h3 {
         text-align: center !important;
         font-size: 1.25rem !important;
+    }
+
+    #hero #hero-text #hero-button.button {
+        margin-top: 4rem;
     }
 }
 
@@ -551,6 +572,13 @@ nav #navlinks .button:hover {
         width: 100%;
     }
 
+    #event #event-info {
+        width: 110%;
+        height: 24rem;
+    }
+    #event #event-info #map {
+        height: 100%;
+    }
     #event #event-info #map-caption p {
         font-size: 1rem;
     }
@@ -662,6 +690,46 @@ nav #navlinks .button:hover {
 @media (max-width: 965px) {
     #gallery {
         padding: 7.5rem 10%;
+    }
+}
+
+@media (max-width: 865px) {
+    #gallery h1 {
+        display: none;
+    }
+    #gallery h1.hidden {
+        display: inline !important;
+    }
+
+    #gallery {
+        overflow: scroll;
+    }
+    #gallery #carousel {
+        overflow: scroll;
+    }
+
+    #gallery #carousel .arrow {
+        display: none;
+    }
+    #gallery #carousel #carousel-images {
+        position: static;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 1rem;
+        overflow: visible;
+    }
+    #gallery #carousel #carousel-images img {
+        position: static;
+        border-radius: 0;
+        width: 60%;
+        height: 75%;
+        transform: scale(1) !important;
+        transition: none;
+    }
+
+    @keyframes cycle {
+        0% {  }
     }
 }
 
