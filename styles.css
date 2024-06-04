@@ -722,8 +722,8 @@ nav #navlinks .button:hover {
     #gallery #carousel #carousel-images img {
         position: static;
         border-radius: 0;
-        width: 60%;
-        height: 75%;
+        width: 100%;
+        height: 125%;
         transform: scale(1) !important;
         transition: none;
     }
