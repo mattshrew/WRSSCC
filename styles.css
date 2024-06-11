@@ -177,8 +177,8 @@ nav #navlinks .button:hover {
     left: 0;
     opacity: 0;
     overflow: hidden;
-    /* animation: shift-words 15s linear infinite 0s; */
-    animation: shift-words 12s linear infinite 0s;
+    animation: shift-words 15s linear infinite 0s;
+/*     animation: shift-words 12s linear infinite 0s; */
 }
 
 #hero #hero-text #hero-desc h3 span:nth-child(2) {
@@ -190,9 +190,9 @@ nav #navlinks .button:hover {
 #hero #hero-text #hero-desc h3 span:nth-child(4) {
     animation-delay: 9s;
 }
-/* #hero #hero-text #hero-desc h3 span:nth-child(5) {
+#hero #hero-text #hero-desc h3 span:nth-child(5) {
     animation-delay: 12s;
-} */
+}
 
 #hero #hero-text #hero-button.button {
     display: none;
